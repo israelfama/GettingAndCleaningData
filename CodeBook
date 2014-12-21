@@ -1,0 +1,51 @@
+This code book describes the variables used in this project.
+
+The data:
+In this course project we deal with data collected from the Human Activity Recognition Using Smartphones Data Set.
+Please refer to the website http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones for more information on that
+
+The dataset includes the following files:
+=========================================
+
+- 'README.txt'
+
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+
+- 'features.txt': List of all features.
+
+- 'activity_labels.txt': Links the class labels with their activity name.
+
+- 'train/X_train.txt': Training set.
+
+- 'train/y_train.txt': Training labels.
+
+- 'test/X_test.txt': Test set.
+
+- 'test/y_test.txt': Test labels.
+
+The features from the accelerometer and gyroscope 3-axial raw signals.
+We have the following features:
+tBodyAcc-XYZ
+tGravityAcc-XYZ
+tBodyAccJerk-XYZ
+tBodyGyro-XYZ
+tBodyGyroJerk-XYZ
+tBodyAccMag
+tGravityAccMag
+tBodyAccJerkMag
+tBodyGyroMag
+tBodyGyroJerkMag
+fBodyAcc-XYZ
+fBodyAccJerk-XYZ
+fBodyGyro-XYZ
+fBodyAccMag
+fBodyAccJerkMag
+fBodyGyroMag
+fBodyGyroJerkMag
+
+But the files present also features that are derived from the above list. Here we are interested in the features that represent 
+mean and standard deviation of the measurements.
+So, the R script looks for features whose names refers to -mean or -std.
+It's really important to point out that some features represent an angle calculation between two vectors, one of them with a -mean
+in their names.
+Since such features do not represent a mean (they are angles, instead) the R script keeps them out of the data sets.
